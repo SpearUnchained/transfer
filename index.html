@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transaction Complete</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    <style>
+        .transaction-container {
+            max-width: 600px;
+            border: 1px solid #dee2e6;
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .transaction-container h2 {
+            margin-bottom: 20px;
+            color: #000;
+        }
+        .transaction-container p {
+            margin: 10px 0;
+            color: #000;
+        }
+        .txn-card {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 20px 0;
+            padding: 15px;
+            border: 1px solid #dee2e6;
+            border-radius: 5px;
+            background-color: #f8f9fa;
+            color: #000;
+        }
+        .txn-card p {
+            margin: 0;
+            font-weight: bold;
+        }
+        .btn-copy {
+            background-color: #f8f9fa;
+            border-color: #000;
+            color: #000;
+        }
+        .btn-primary {
+            background-color: #000;
+            border: none; /* Remove border */
+            padding: 6px 30px; /* Adjust padding to make button larger */
+            font-size: 1.2rem; /* Increase font size for larger button */
+            color: #fff; /* Text color */
+        }
+        .btn-primary:hover,
+        .btn-primary:focus {
+            background-color: #000; /* Maintain black background on hover/focus */
+            color: #fff; /* Text color on hover/focus */
+        }
+        .full-height {
+            height: 100vh;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container d-flex justify-content-center align-items-center full-height">
+    <div class="transaction-container">
+        <h2>Transaction Complete</h2>
+        <p>You have paid the fees successfully, continue to go back to telegram and join boss battle!</p>
+        <div class="txn-card">
+            <div>
+                <p>Txn Hash</p>
+                <a href="#" id="txnLink" target="_blank">
+                    <span id="shortenedHash"></span>
+                </a>
+            </div>
+            <button id="continueBtn" class="btn btn-primary btn-copy">Continue</button>
+        </div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
